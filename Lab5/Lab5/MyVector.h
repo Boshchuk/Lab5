@@ -3,14 +3,24 @@
 class MyVector
 {
 public:
-	float * pointer;
+	float * _pointer;
 
-	int size;
+	int _size;
 
-	int state;
-
+	int _state;
+public:
 	MyVector();
-	MyVector(int size, float intValue);
+	MyVector(int size, float initialtValue);
 
+public:
+	void DrawOnConsole() const;
+	float SummOfElement();
+
+	friend bool operator ==(MyVector &arrInt, MyVector &arrInt2);
+	friend bool operator > (MyVector &arrInt, MyVector &arrInt2);
+	friend bool operator >= (MyVector &arrInt, MyVector &arrInt2);
+	friend bool operator < (MyVector &arrInt, MyVector &arrInt2);
+	friend bool operator <= (MyVector &arrInt, MyVector &arrInt2);
+public:
 	~MyVector();
 };
