@@ -17,12 +17,29 @@ char* ToStringBool(bool b)
 int main()
 {
 	setlocale(LC_ALL, "ru-ru");
-	MyVector v1 = MyVector();
-	MyVector v2 = MyVector(3, 1.2);
 
+
+
+	MyVector v1 = MyVector();
+	
+
+	std::cout << "Default constructed vector: " << std::endl;
 	std::cout << "v1:= ";
 	v1.DrawOnConsole();
 
+	int size;
+	float defVal;
+
+	std::cout << "Input size of another vector(int): ";
+	std::cin >> size;
+	std::cout <<  std::endl;
+
+	std::cout << "Input default values for another this vector(float ): ";
+	std::cin >> defVal;
+	std::cout << std::endl;
+
+
+	MyVector v2 = MyVector(size, defVal);
 	std::cout << "v2:= ";
 	v2.DrawOnConsole();
 
